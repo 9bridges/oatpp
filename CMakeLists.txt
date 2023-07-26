@@ -117,6 +117,11 @@ message("\n#####################################################################
 
 message("oatpp version: '${OATPP_THIS_MODULE_VERSION}'")
 
+if ("${CMAKE_SYSTEM_NAME}" STREQUAL "AIX")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -mpowerpc64 -maix64 -pthread")
+    set(CMAKE_CXX_ARCHIVE_CREATE "<CMAKE_AR> -X64 -r -v -o  <TARGET> <LINK_FLAGS> <OBJECTS>")
+endif()
+
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=thread")
 
