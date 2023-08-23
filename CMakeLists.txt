@@ -15,8 +15,8 @@ set(OATPP_THIS_MODULE_VERSION ${oatpp_VERSION}) ## version of the module (also s
 project(oatpp VERSION ${OATPP_THIS_MODULE_VERSION} LANGUAGES CXX)
 
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
-option(OATPP_INSTALL "Create installation target for oat++" ON)
-option(OATPP_BUILD_TESTS "Create test target for oat++" ON)
+option(OATPP_INSTALL "Create installation target for oat++" OFF)
+option(OATPP_BUILD_TESTS "Create test target for oat++" OFF)
 option(OATPP_LINK_TEST_LIBRARY "Link oat++ test library" ON)
 option(OATPP_LINK_ATOMIC "Link atomic library for other platform than MSVC|MINGW|APPLE|FreeBSD" ON)
 option(OATPP_MSVC_LINK_STATIC_RUNTIME "MSVC: Link with static runtime (/MT and /MTd)." OFF)
